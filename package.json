@@ -1,0 +1,14 @@
+{
+	"name": "aah",
+	"version": "0.0.2",
+	"private": true,
+	"scripts": {
+		"start": "node app.js"
+	},
+	"dependencies": {
+		"body-parser": "1.18.*",
+		"express": "4.*",
+		"mysql": "^2.18.1"
+	},
+	"repository": {}
+}
