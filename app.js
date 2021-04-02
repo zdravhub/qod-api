@@ -196,22 +196,21 @@ app.get('/',
 app.get('/version',  
 	function(req, res) {
         logMsg('/version');
-		res.send("qod-api: 1.0.0" );
+		res.send(appVersion);
 	}
 );
 
+const package = require('./package.json');
+const appName = package.name;
+const appVersion = package.version;
 
-app.get('/jc',  
-	function(req, res) {
-        logMsg('/jc is calling');
-		res.send("woo hoo!" );
-	}
-);
-
+console.log(`Starting ${appName} v${appVersion}.`);
 
 app.listen(app.get('port'), '0.0.0.0', function() {
-	  logMsg("Quotes of the Day being served on port " + app.get('port'));
+	  console.log("Now serving quotes on port " + app.get('port'));
 });
+
+
 
 
 
