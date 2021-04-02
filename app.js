@@ -1,6 +1,8 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 const mysql = require('mysql');
+require('@instana/collector')({
+    autopProfile: true
+});
 
 var app = express();
 app.set('port',process.env.PORT || 3000)
@@ -14,8 +16,8 @@ function logErr( err) {
     console.error(err);
 }
 
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 app.enable('trust proxy'); 
 

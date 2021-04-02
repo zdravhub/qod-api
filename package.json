@@ -6,10 +6,9 @@
 		"start": "node app.js"
 	},
 	"dependencies": {
-		"body-parser": "1.18.*",
 		"express": "4.*",
 		"mysql": "^2.18.1",
-        "@instana/collector": "1.118.0"
+		"@instana/collector": "1.118.0"
 	},
 	"repository": {}
 }
