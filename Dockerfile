@@ -1,8 +1,11 @@
 # FROM node:11.15.0-alpine
 FROM registry.redhat.io/rhel8/nodejs-16
 
-RUN mkdir /app
-WORKDIR /app
+ENV APP_ROOT=/opt/app-root
+
+# RUN mkdir /app
+
+WORKDIR $APP_ROOT
 
 COPY app.js .
 COPY package.json .
