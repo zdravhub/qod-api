@@ -5,7 +5,7 @@ require('@instana/collector')({
 });
 
 var app = express();
-app.set('port',process.env.PORT || 3000)
+app.set('port',process.env.PORT || 8080)
 
 
 function logMsg( msg ) {
@@ -52,7 +52,7 @@ var getConnection = function(res,callback) {
 // }
 
 function dailyQuoteId(){
-    // assumes the order of the databaseis random, and day of year is same as quote id.
+    // assumes the order of the database is random, and day of year is same as quote id.
     var now = new Date();
     var start = new Date(now.getFullYear(), 0, 0);
     var diff = (now - start) + ((start.getTimezoneOffset() - now.getTimezoneOffset()) * 60 * 1000);

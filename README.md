@@ -3,7 +3,7 @@
 Quote of the Day API
 
 ### Ports
-This API service listens on port `3000`. Please set the service to use port 3000, either when deploying from Dockerfile or Source-to-image, or by editing the service definition after deployment.
+This API service listens on port `8080`. Please set the service to use port 8080, either when deploying from Dockerfile or Source-to-image, or by editing the service definition after deployment. This is the default port used for most OpenShift deployment.
 
 ### Environment Varaiables
 Required environment variables that are required to connect to the database tier:
