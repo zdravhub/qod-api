@@ -1,8 +1,5 @@
 const express = require('express');
 const mysql = require('mysql');
-require('@instana/collector')({
-    autopProfile: true
-});
 
 var app = express();
 app.set('port',process.env.PORT || 8080)
