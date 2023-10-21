@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: qod-api
-          image: ibmicpcoc/qod-api
+          image: quay.io/zzdravkov/qod-api
           ports:
             - name: http
               containerPort: 3000
@@ -26,8 +26,8 @@ spec:
             - name: DB_HOST
               value: qod-db
             - name: DB_USER
-              value: root
+              value: user
             - name: DB_PASS
-              value: root
+              value: pass
           imagePullPolicy: Always
       restartPolicy: Always
